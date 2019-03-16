@@ -1,2 +1,10 @@
 .DS_Store
 __pycache__/
+
+
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
