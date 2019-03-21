@@ -18,11 +18,16 @@ with open(links, 'r') as file:
     
 num_lines=len(open(links).readlines()) -1 
 
-objs = []
-for i in range(num_lines):
-    objs.append(Clip(linkarr[i], " "))
-    objs[i].download_subs()
-    if not objs[i].check_for_string(keyword):
-    	i+=1
-    else:
-    	objs[i].download_clip(keyword)
+def main():
+    objs = []
+    for i in range(num_lines):
+        objs.append(Clip(linkarr[i], " "))
+        objs[i].download_subs()
+		if not objs[i].check_for_string(keyword):
+			i+=1
+		else:
+			objs[i].download_clip(keyword)
+			
+
+if __name__ == '__main__':
+	main()

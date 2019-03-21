@@ -12,7 +12,7 @@ REQUIRED = [
     'webvtt-py',
 ]
 
-setup(name='YouTube Search',
+setup(name='youtubesearch',
 	packages=['youtubesearch'],
 	version='0.1.0',
 	description='Automated video editing for cutting YouTube videos at interaval where your keyword occurs.',
@@ -22,6 +22,9 @@ setup(name='YouTube Search',
 	url='https://github.com/jakemcannon/YouTubeSearch',
 	keywords=['youtube', 'video editing'],
 	py_modules=['youtubesearch'],
+	entry_points={
+		'console_scripts': ['youtubesearch=youtubesearch.youtubesearch:main'],
+	},
 
 	install_requires=REQUIRED,
 	include_package_data=True,
@@ -35,8 +38,8 @@ setup(name='YouTube Search',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy'
+        'Programming Language :: Python :: 3.7',
+
 	],
 
 	)
