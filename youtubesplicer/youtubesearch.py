@@ -23,10 +23,10 @@ def main():
     for i in range(num_lines):
         objs.append(Clip(linkarr[i], " "))
         objs[i].download_subs()
-		if not objs[i].check_for_string(keyword):
-			i+=1
-		else:
-			objs[i].download_clip(keyword)
+        if not objs[i].check_for_string(keyword):
+        	i+=1
+        else:
+            objs[i].download_clip(keyword)
 			
 
 if __name__ == '__main__':

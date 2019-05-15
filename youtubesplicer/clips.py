@@ -17,7 +17,6 @@ class Clip:
     def get_sub_name(self):
         return self.sub_name
 
-    #check for keword then keep or delete subsequent subtitle file
     def check_for_string(self, keyword):
         with open(self.sub_name, 'r') as f:
             data = f.read()
