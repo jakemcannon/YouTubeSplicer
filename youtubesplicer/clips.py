@@ -64,6 +64,8 @@ class Clip:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(self.name)
             sub = info['title'] + "-" + info['id'] + ".en.vtt"
+            print(sub)
+            print("----------------printing sub----------------")
             re.sub("[^a-zA-Z0-9]+", "", sub)
             self.sub_name = sub 
             ydl.download([str(self.name)])
