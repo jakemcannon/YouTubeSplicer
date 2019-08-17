@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import os
+import re
 import webvtt
 import youtube_dl
 import subprocess
@@ -62,6 +63,7 @@ class Clip:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(self.name)
             sub = info['title'] + "-" + info['id'] + ".en.vtt"
+            re.sub("[^a-zA-Z0-9]+", "", sub)
             self.sub_name = sub 
             ydl.download([str(self.name)])
 
