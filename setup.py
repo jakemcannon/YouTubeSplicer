@@ -21,7 +21,7 @@ setup(name='youtubesplicer',
 	license='MIT',
 	url='https://github.com/jakemcannon/YouTubeSplicer',
 	keywords=['youtube', 'video editing'],
-	py_modules=['youtubesearch'],
+	py_modules=['youtubesplicer'],
 	entry_points={
 		'console_scripts': ['youtubesplicer=youtubesplicer.youtubesplicer:main'],
 	},
