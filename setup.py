@@ -14,7 +14,7 @@ REQUIRED = [
 
 setup(name='youtubesplicer',
 	packages=['youtubesplicer'],
-	version='0.1.0',
+	version='0.0.1',
 	description='Automated video editing for cutting YouTube videos at interval where your keyword occurs.',
 	author='Jacob Cannon',
 	author_email='jakemcannon@gmail.com',
