@@ -44,8 +44,6 @@ class Clip:
     def clean_title(self):
         title = self.sub_name
         title_edited = title.replace(" ", "").split(".")[0]
-        re.sub("[^a-zA-Z0-9]+", "", title_edited)
-        title_edited.replace('"', '\\"')
         return title_edited
 
     def download_subs(self):
@@ -65,11 +63,6 @@ class Clip:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(self.name)
             sub = info['title'] + "-" + info['id'] + ".en.vtt"
-            print(sub)
-            print("----------------printing sub----------------")
-            re.sub("[^a-zA-Z0-9]+", "", sub)
-            sub.replace("'", "\\'")
-            print(sub)
             self.sub_name = sub 
             ydl.download([str(self.name)])
 
