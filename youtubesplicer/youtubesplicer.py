@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from clips import Clip
+from .clips import Clip
 import os
 import webvtt
 import youtube_dl
