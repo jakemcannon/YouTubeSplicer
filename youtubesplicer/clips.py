@@ -45,6 +45,7 @@ class Clip:
         title = self.sub_name
         title_edited = title.replace(" ", "").split(".")[0]
         re.sub("[^a-zA-Z0-9]+", "", title_edited)
+        title_edited.replace('"', '\\"')
         return title_edited
 
     def download_subs(self):
@@ -67,6 +68,8 @@ class Clip:
             print(sub)
             print("----------------printing sub----------------")
             re.sub("[^a-zA-Z0-9]+", "", sub)
+            sub.replace("'", "\\'")
+            print(sub)
             self.sub_name = sub 
             ydl.download([str(self.name)])
 
