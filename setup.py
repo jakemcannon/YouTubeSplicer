@@ -12,10 +12,10 @@ REQUIRED = [
     'webvtt-py',
 ]
 
-setup(name='youtubesearch',
-	packages=['youtubesearch'],
+setup(name='youtubesplicer',
+	packages=['youtubesplicer'],
 	version='0.1.0',
-	description='Automated video editing for cutting YouTube videos at interaval where your keyword occurs.',
+	description='Automated video editing for cutting YouTube videos at interval where your keyword occurs.',
 	author='Jacob Cannon',
 	author_email='jakemcannon@gmail.com',
 	license='MIT',
@@ -23,7 +23,7 @@ setup(name='youtubesearch',
 	keywords=['youtube', 'video editing'],
 	py_modules=['youtubesearch'],
 	entry_points={
-		'console_scripts': ['youtubesearch=youtubesearch.youtubesearch:main'],
+		'console_scripts': ['youtubesplicer=youtubesplicer.youtubesplicer:main'],
 	},
 
 	install_requires=REQUIRED,
