@@ -44,6 +44,7 @@ class Clip:
     def clean_title(self):
         title = self.sub_name
         title_edited = title.replace(" ", "").split(".")[0]
+        re.sub("[^a-zA-Z0-9]+", "", title_edited)
         return title_edited
 
     def download_subs(self):
